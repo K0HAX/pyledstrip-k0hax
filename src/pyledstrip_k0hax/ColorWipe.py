@@ -7,3 +7,4 @@ def ColorWipe(strip, color, wait_ms=50):
         strip.setPixelColor(i, color)
         strip.show()
         time.sleep(wait_ms / 1000.0)
+    return strip

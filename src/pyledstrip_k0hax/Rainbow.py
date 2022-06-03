@@ -8,6 +8,7 @@ def Rainbow(strip, wait_ms=20, iterations=1):
             strip.setPixelColor(i, Wheel((i + j) & 255))
         strip.show()
         time.sleep(wait_ms / 1000.0)
+    return strip
 
 def RainbowCycle(strip, wait_ms=20, iterations=5):
     """Draw rainbow that uniformly distributes itself across all pixels."""
@@ -17,3 +18,5 @@ def RainbowCycle(strip, wait_ms=20, iterations=5):
                 (int(i * 256 / strip.numPixels()) + j) & 255))
         strip.show()
         time.sleep(wait_ms / 1000.0)
+    return strip
+

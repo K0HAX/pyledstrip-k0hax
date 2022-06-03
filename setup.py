@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pyledstrip-k0hax",
-    version="0.0.4",
+    version="0.0.5",
     author="Michael Englehorn",
     author_email="michael@englehorn.com",
     description="A bundle of utilities for ws281x based LED strips",
