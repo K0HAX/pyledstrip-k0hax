@@ -33,12 +33,12 @@ def TheaterChaseDual(strip, color1, color2, wait_ms=50, iterations=10, stripStat
 
     for j in range(iterations):
         for q in range(3):
-            for i in range(0, strip.numPixels(), 3):
+            for i in reversed(range(0, strip.numPixels(), 3)):
                 stripState.SetPixel(i + q, color1)
                 strip.setPixelColor(i + q, color1)
             strip.show()
             time.sleep(wait_ms / 1000.0)
-            for i in range(0, strip.numPixels(), 3):
+            for i in reversed(range(0, strip.numPixels(), 3)):
                 #pixelColor = Color(0, 0, 0, 0)
                 pixelColor = color2
                 stripState.SetPixel(i + q, pixelColor)
