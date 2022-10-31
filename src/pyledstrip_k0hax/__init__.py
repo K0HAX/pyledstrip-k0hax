@@ -1,5 +1,6 @@
 from pyledstrip_k0hax.Arbitrary import Arbitrary
 from pyledstrip_k0hax.ColorWipe import ColorWipe
+from pyledstrip_k0hax.Flasher import Flasher
 from pyledstrip_k0hax.Rainbow import Rainbow, RainbowCycle
 from pyledstrip_k0hax.SetAll import SetAll
 from pyledstrip_k0hax.SingleLed import SingleLed
