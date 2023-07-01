@@ -2,6 +2,7 @@ import logging
 import inspect
 import json
 import copy
+from threading import Lock
 from rpi_ws281x import Color
 
 class AttributeSetError(Exception):
@@ -18,7 +19,15 @@ class ArrayLengthError(Exception):
 
 class StripState():
     def __init__(self, strip):
+        self._lock = Lock()
         self._LedArray = [Color(0, 0, 0, 0)] * strip.numPixels()
+
+    # Thread safety
+    def lock(self):
+        self._lock.acquire()
+
+    def release(self):
+        self._lock.release()
 
     def SetPixel(self, pixel, value):
         if type(self._LedArray[pixel]) != int:
